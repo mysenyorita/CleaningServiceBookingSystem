@@ -2,6 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
-    <h3>Your application description page.</h3>
-    <p>Use this area to provide additional information.</p>
+    <h3>The best sevice we provide.</h3>
+    <p>A clean home is a healthy and happy home. We have a variety of cleaning packages to suit your home's needs depending on size, comprehensiveness, and regularity.</p>
 </asp:Content>

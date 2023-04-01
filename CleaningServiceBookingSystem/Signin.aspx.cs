@@ -14,10 +14,10 @@ namespace CleaningServiceBookingSystem
 
         }
 
-        protected void BtnReset_Click(object sender, EventArgs e)
+        protected void BtnReset(object sender, EventArgs e)
         {
-            txtEmail.Text = string.Empty;
-            txtPassword.Text = string.Empty;
+            txtEmail.Text = "";
+            txtPassword.Text = "";
         }
     }
 }

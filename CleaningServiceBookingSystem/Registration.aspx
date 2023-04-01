@@ -1,57 +1,49 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="CleaningServiceBookingSystem.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginReg.Master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="CleaningServiceBookingSystem.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-     <div>  
-            <table class="auto-style1">  
-                <tr>  
-                    <td>Name :</td>  
-                    <td>  
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>  
-                    </td>  
-  
-               </tr>  
-                <tr>  
-                    <td>Password</td>  
-                     <td> <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>  
-                </tr>  
-                <tr>  
-                    <td>Confirm Password</td>  
-                    <td>  
-                        <asp:TextBox ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>  
-                    </td>  
-                </tr>  
-                <tr>  
-                    <td>City</td>  
-                    <td>  
-                        <asp:DropDownList ID="DropDownList1" runat="server">  
-                            <asp:ListItem Text="Select City" Value="select" Selected="True"></asp:ListItem>  
-                            <asp:ListItem Text="Bogo" Value="Bogo"></asp:ListItem>  
-                            <asp:ListItem Text="Cebu" Value="Cebu"></asp:ListItem>  
-                            <asp:ListItem Text="" Value=""></asp:ListItem>  
-                        </asp:DropDownList>  
-                    </td>  
-                </tr>  
-                <tr>  
-                    <td>Gender</td>  
-                    <td>  
-                        <asp:RadioButtonList ID="RadioButtonList1" runat="server">  
-                            <asp:ListItem>Male</asp:ListItem>  
-                            <asp:ListItem>Female</asp:ListItem>  
-                        </asp:RadioButtonList>  
-                    </td>  
-               </tr>  
-                <tr>  
-                    <td>Gmail</td>  
-                    <td>  
-                        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>  
-                    </td>  
-                </tr>  
-                <tr>  
-                    <td>  
-                        <asp:Button ID="Button1" runat="server" Text="Button" />  
-                    </td>  
-                </tr>  
-            </table>  
-        </div>  
+    <section class="vh-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 text-black">
+                    <div class="px-5 ms-xl-4">
+                        <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                        <span class="h1 fw-bold mb-0">Daisy Cleaning Services</span>
+                    </div>
+
+                    <br/>
+                    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+                        <div style="width:23rem;">
+
+                            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Register</h3>
+
+                            <div class="form-outline mb-4"">
+                                <asp:TextBox runat="server" Enabled="True" ID="txtLastName" class="form-control" required="required"></asp:TextBox>
+                                <asp:Label runat="server" class= "form-label" for="lblLastName">Last Name</asp:Label>
+                            </div>
+
+                            <div class="form-outline mb-4"">
+                                <asp:TextBox runat="server" Enabled="True" ID="txtFirstName" class="form-control" required="required"></asp:TextBox>
+                                <asp:Label runat="server" class= "form-label" for="lblFirstName">First Name</asp:Label>
+                            </div>
+
+                            <div class="form-outline mb-4"> 
+                                <asp:TextBox runat="server" Enabled="True" TextMode="Email" ID="txtPassword" class="form-control" required="required"></asp:TextBox>
+                                <asp:Label runat="server" class="form-label" for="lblEmail">Email</asp:Label>
+                            </div>
+
+
+                            <div class="pt-1 mb-4">
+                                <asp:Button Text="Register" runat="server" ID="btnLogin" OnClick-="btnLogin_Click" class="btn btn-info btn-lg btn-block" />
+                            </div>                          
+                                                                                    
+                            <p>Already have an account? <a href="Signin.aspx" class="link-info">Sign In</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
 
 </asp:Content>
