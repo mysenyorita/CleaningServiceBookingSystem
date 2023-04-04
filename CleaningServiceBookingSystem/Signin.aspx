@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Sign In" Language="C#" MasterPageFile="~/LoginReg.Master" AutoEventWireup="true" CodeBehind="Signin.aspx.cs" Inherits="CleaningServiceBookingSystem.Signin" %>
+﻿<%@ Page Title="Sign In" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Signin.aspx.cs" Inherits="CleaningServiceBookingSystem.Signin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <section class="vh-100">
@@ -15,9 +15,7 @@
                     <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
                         <div style="width:23rem;">
-
                             <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
-
                             <div class="form-outline mb-4">
                                 <asp:TextBox runat="server" Enabled="True" Textmode="Email" ID="txtEmail" class="form-control" required="required"></asp:TextBox>
                                 <asp:Label runat="server" class="form-label" for="lblEmailAddress">Email Address</asp:Label>

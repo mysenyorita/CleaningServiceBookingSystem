@@ -65,11 +65,11 @@ namespace CleaningServiceBookingSystem
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new CleaningServiceBookingSystem.LoginReg Master
+        public new CleaningServiceBookingSystem.SiteMaster Master
         {
             get
             {
-                return ((CleaningServiceBookingSystem.LoginReg)(base.Master));
+                return ((CleaningServiceBookingSystem.SiteMaster)(base.Master));
             }
         }
     }
