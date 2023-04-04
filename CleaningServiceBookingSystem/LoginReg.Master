@@ -58,7 +58,7 @@
             
                 <hr />
                 <footer>
-                    <p>&copy; <%: DateTime.Now.Year %> - Daisy Cleaning Service</p>
+                    <p>&copy;</p>
                 </footer>
             </div>
 

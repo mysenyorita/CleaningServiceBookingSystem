@@ -6,9 +6,10 @@
             <div class="row">
                 <div class="col-sm-6 text-black">
 
-                    <div class="px-5 ms-xl-4">
-                        <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i> <!-- FontAwesome -->
-                        <span class="h1 fw-bold mb-0">Daisy Cleaning Services</span>
+                    <div <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x"></i>
+                         </span>
                     </div>
                     <br/>
                     <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
@@ -26,10 +27,7 @@
                                 <asp:TextBox runat="server" Enabled="True" TextMode="Password" ID="txtPassword" class="form-control" required="required"></asp:TextBox>
                                 <asp:Label runat="server" class="form-label" for="lblPassword">Password</asp:Label>
                             </div>
-
-                            <div class="pt-1 mb-4">
-                                <asp:Button Text="Login" runat="server" ID="btnSignin" OnClick="btnSignin_Click" class="btn btn-info btn-lg btn-block" />
-                            </div>                           
+                          
 
                             <p><asp:CheckBox runat="server" ID="cbxRememberMe"></asp:CheckBox>Remember Me</p>
                             <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
