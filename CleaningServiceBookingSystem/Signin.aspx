@@ -38,8 +38,8 @@
                 </div>
 
                 <div class="col-sm-6 px-0 d-none d-sm-block">
-                    <img src="https://bookdirtbusters.com/wp-content/uploads/2020/10/house-cleaning-service.jpeg"
-                    alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/337406375_253370323703190_3416556928671028571_n.jpg?stp=dst-jpg_p206x206&_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeGyEPMap6u6VQg9C1KdIFLQ-b7PqR5Yzab5vs-pHljNpozefiOWrkSn-lQE1Y2dJMUZI01F1FqUPMWSUj-z952a&_nc_ohc=sSYIAWWFJ0sAX_q05PL&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdT7LizIrChgOzbDVtiDA5sAQBc_izVyzie-PCWvb2m0vA&oe=64532651"
+                    alt="Login image" class="w-100 vh-100" style="object-fit: contain; object-position: left;">
                 </div>
             </div>
         </div>
