@@ -74,7 +74,7 @@
 
 
                             <div class="pt-1 mb-4">
-                                <asp:Button Text="Register" runat="server" ID="btnLogin" OnClick-="btnLogin_Click" class="btn btn-info btn-lg btn-block" />
+                                <asp:Button Text="Register" runat="server" ID="btnRegister" OnClick="btnRegister_OnClick" class="btn btn-info btn-lg btn-block" />
                             </div>                          
                                                                                     
                             <p>Already have an account? <a href="Signin.aspx" class="link-info">Sign In</a></p>

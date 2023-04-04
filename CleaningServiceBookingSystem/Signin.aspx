@@ -22,7 +22,7 @@
                             </div>
 
                             <div class="form-outline mb-4">
-                                <asp:TextBox runat="server" Enabled="True" TextMode="Password" ID="txtPassword" class="form-control" required="required"></asp:TextBox>
+                                <asp:TextBox runat="server" Enabled="True" TextMode="Password" ID="txtPassword" class="form-control" required="required" onkeydown="storeValue(event)"></asp:TextBox>
                                 <asp:Label runat="server" class="form-label" for="lblPassword">Password</asp:Label>
                             </div>
 

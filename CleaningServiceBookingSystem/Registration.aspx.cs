@@ -11,7 +11,17 @@ namespace CleaningServiceBookingSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+        }
+        protected void btnRegister_OnClick(object sender, EventArgs e)
+        {
+            var Lname = txtLastName.Text;
+            var Fname = txtFirstName.Text;
+            var phone = txtPhone.Text;
+            var email = txtEmail;
+            Console.WriteLine("Button Used");
+            Response.Redirect("~/Default.aspx");
+            
         }
     }
 }

@@ -33,13 +33,13 @@ namespace CleaningServiceBookingSystem
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
 
         /// <summary>
-        /// txtPassword control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
         /// txtPhone control.
@@ -51,13 +51,13 @@ namespace CleaningServiceBookingSystem
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
 
         /// <summary>
-        /// btnLogin control.
+        /// btnRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
+        protected global::System.Web.UI.WebControls.Button btnRegister;
 
         /// <summary>
         /// Master property.
