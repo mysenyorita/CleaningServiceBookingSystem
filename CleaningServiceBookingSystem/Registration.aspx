@@ -29,7 +29,7 @@
                             </div>
 
                             <div class="form-outline mb-4"> 
-                                <asp:TextBox runat="server" Enabled="True" TextMode="Email" ID="txtPassword" class="form-control" required="required"></asp:TextBox>
+                                <asp:TextBox runat="server" Enabled="True" TextMode="Email" ID="txtEmail" class="form-control" required="required"></asp:TextBox>
                                 <asp:Label runat="server" class="form-label" for="lblEmail">Email</asp:Label>
                             </div>
 
@@ -39,9 +39,8 @@
                             </div>
 
                          <h5>Select Address</h5>
-                       <form method="post" action="">
-                        Street Address:
-                            <select name="Choice">
+                       <form class="form-outline mb-4" method="post" action="">
+                           <select name="Choice">
                                     <option value="Riverside">Riverside</option>
                                     <option value="Fermina">Fermina</option>
                                     <option value="Pasil">Pasil</option>
