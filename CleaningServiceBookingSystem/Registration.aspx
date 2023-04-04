@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginReg.Master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="CleaningServiceBookingSystem.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="CleaningServiceBookingSystem.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <section class="vh-100">
@@ -7,6 +7,7 @@
                 <div class="col-sm-6 text-black">
                     <div class="px-5 ms-xl-4">
                         <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                        <br/>
                         <span class="h1 fw-bold mb-0">Daisy Cleaning Services</span>
                     </div>
 
@@ -78,7 +79,7 @@
                             </div>                          
                                                                                     
                             <p>Already have an account? <a href="Signin.aspx" class="link-info">Sign In</a></p>
-
+                       </form>
                         </div>
                     </div>
                 </div>
