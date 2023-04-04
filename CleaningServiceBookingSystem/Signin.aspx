@@ -31,7 +31,7 @@
 
                             <p><asp:CheckBox runat="server" ID="cbxRememberMe"></asp:CheckBox>Remember Me</p>
                             <p class="small mb-5 pb-lg-2">
-                                <a class="text-muted" href="#!">Forgot password?</a>
+                                <a class="text-muted">Forgot password?</a>
                             </p>
                             <p>Don't have an account? <a href="Registration.aspx" class="link-info">Register here</a></p>
 
