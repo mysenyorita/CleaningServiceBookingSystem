@@ -17,12 +17,12 @@
 
                             <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Register</h3>
 
-                            <div class="form-outline mb-4"">
+                            <div class="form-outline mb-4">
                                 <asp:TextBox runat="server" Enabled="True" ID="txtLastName" class="form-control" required="required"></asp:TextBox>
                                 <asp:Label runat="server" class= "form-label" for="lblLastName">Last Name</asp:Label>
                             </div>
 
-                            <div class="form-outline mb-4"">
+                            <div class="form-outline mb-4">
                                 <asp:TextBox runat="server" Enabled="True" ID="txtFirstName" class="form-control" required="required"></asp:TextBox>
                                 <asp:Label runat="server" class= "form-label" for="lblFirstName">First Name</asp:Label>
                             </div>
