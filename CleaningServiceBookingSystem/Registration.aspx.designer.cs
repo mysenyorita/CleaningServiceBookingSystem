@@ -58,5 +58,19 @@ namespace CleaningServiceBookingSystem
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogin;
+
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new CleaningServiceBookingSystem.LoginReg Master
+        {
+            get
+            {
+                return ((CleaningServiceBookingSystem.LoginReg)(base.Master));
+            }
+        }
     }
 }
