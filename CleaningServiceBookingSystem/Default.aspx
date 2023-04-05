@@ -6,7 +6,16 @@
         <h1>Home Cleaning Service</h1>
         <p class="lead">Taking cleanliness to the next level.</p>
     </div>
+<style>
+    .jumbotron {
+      background-image: url(bg.jpg);
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    }
 
+</style>
     <div class="row">
         <div class="col-md-4">
             <h2>Professional</h2>
