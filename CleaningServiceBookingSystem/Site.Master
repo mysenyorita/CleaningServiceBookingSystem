@@ -55,23 +55,28 @@
                        <li><a runat="server" href="~/Contact">Contact</a></li>
                    </ul>
                    <ul class="nav navbar-nav navbar-right">
-                       <% if (HttpContext.Current.User.Identity.IsAuthenticated) { %>
-                          <li class="nav-item dropdown">
-                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <%= UserName %>
-                             </a>
-                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Profile</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="Logout.aspx">Logout</a>
-                             </div>
-                          </li>
-                       <% } else { %>
-                          <li class="nav-item">
-                             <a class="nav-link" href="Signin.aspx" id="Signin">Signin</a>
-                          </li>
-                       <% } %>
-
+                      <% if (Request.IsAuthenticated) { %>
+                           <script>
+                           console.log("Request Validated") // Debug
+                           </script>
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <%= UserName %>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                               <a class="dropdown-item" href="#">Profile</a>
+                               <div class="dropdown-divider"></div>
+                               <a class="dropdown-item" href="Logout.aspx">Logout</a>
+                            </div>
+                         </li>
+                      <% } else { %>
+                           <script>
+                           console.log("Request Invalidated") // Debug
+                           </script>
+                         <li class="nav-item">
+                            <a class="nav-link" href="Signin.aspx" id="Signin">Signin</a>
+                         </li>
+                      <% } %>
                    </ul>
                </div>
            </div>
@@ -83,10 +88,18 @@
 
             </asp:ContentPlaceHolder>
             
-            <hr />
-            <footer>
+            
+            <footer id="footer">
                 <p>&copy; <%: DateTime.Now.Year %> - Domestic Cleaning Service</p>
             </footer>
+            <style>
+                footer {
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            height: 50px; /* height of the footer */
+                        }
+            </style>
         </div>
 
     </form>

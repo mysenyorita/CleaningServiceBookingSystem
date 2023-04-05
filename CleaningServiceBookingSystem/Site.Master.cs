@@ -9,8 +9,7 @@ namespace CleaningServiceBookingSystem
 {
     public partial class SiteMaster : MasterPage
     {
-        public string UserName { get; set; }
-
+        public string UserName = "admin";
         protected void Page_Load(object sender, EventArgs e)
         {
             
