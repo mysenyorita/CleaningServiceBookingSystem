@@ -46,9 +46,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-sm-6 signin">
-                </div>
             </div>
         </div>
     </section>
