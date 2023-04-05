@@ -37,6 +37,8 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
        <div class="navbar navbar-inverse navbar-fixed-top">
            <div class="container">
@@ -60,14 +62,14 @@
                            console.log("Request Validated") // Debug
                            </script>
                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               <%= UserName %>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                               <a class="dropdown-item" href="#">Profile</a>
-                               <div class="dropdown-divider"></div>
-                               <a class="dropdown-item" href="Logout.aspx">Logout</a>
-                            </div>
+                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <%= UserName %>
+                             </a>
+                             <div class="dropdown-menu navbar-nav" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="Logout.aspx">Logout</a>
+                             </div>
                          </li>
                       <% } else { %>
                            <script>

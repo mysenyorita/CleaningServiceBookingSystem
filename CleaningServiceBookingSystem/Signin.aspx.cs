@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -19,6 +20,7 @@ namespace CleaningServiceBookingSystem
         {
             string Email = txtEmail.Text;
             string Password = txtPassword.Text;
+            Session["UserName"] = Email;
 
             if (Email == "admin@admin" && Password == "admin")
             {
@@ -36,12 +38,11 @@ namespace CleaningServiceBookingSystem
                 string encryptedTicket = FormsAuthentication.Encrypt(ticket);
                 HttpCookie authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
                 Response.Cookies.Add(authCookie);
-
+                
                 // Redirect to the default page
                 Response.Redirect("~/Default.aspx");
             }
         }
-
 
     }
 }
