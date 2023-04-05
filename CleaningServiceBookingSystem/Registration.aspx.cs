@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -15,12 +16,13 @@ namespace CleaningServiceBookingSystem
         }
         protected void btnRegister_OnClick(object sender, EventArgs e)
         {
-            var Lname = txtLastName.Text;
-            var Fname = txtFirstName.Text;
-            var phone = txtPhone.Text;
-            var email = txtEmail;
-            Console.WriteLine("Button Used");
-            Response.Redirect("~/Default.aspx");
+            string LName;
+            string FName;
+            string FullName;
+
+            LName = txtLastName.Text;
+            FName = txtFirstName.Text;
+            FullName = FName + " " + LName;
             
         }
     }

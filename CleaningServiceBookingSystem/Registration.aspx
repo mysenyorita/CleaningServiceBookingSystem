@@ -34,32 +34,32 @@
                             </div>
 
                             <div class="form-outline mb-4">
-                                <asp:TextBox runat="server" Enabled="True" TextMode="Phone" Placeholder="Phone" ID="txtPhone" class="form-control" required="required"></asp:TextBox>
+                                <asp:TextBox runat="server" Enabled="True" TextMode="Phone" Placeholder="Phone" ID="txtPhone" class="form-control"></asp:TextBox>
                                 <br/>
                             </div>
                             <div class="form-outline mb-4">
-                                <asp:TextBox runat="server" Enabled="True" ID="txtStreet" Placeholder="Street" class="form-control" required="required"></asp:TextBox>
+                                <asp:TextBox runat="server" Enabled="True" ID="txtStreet" Placeholder="Street" class="form-control"></asp:TextBox>
                                 <br/>
                             </div>
                             <div class="form-outline mb-4">
-                                <asp:TextBox runat="server" Enabled="True" ID="txtBarangay" Placeholder="Barangay" class="form-control" required="required"></asp:TextBox>
+                                <asp:TextBox runat="server" Enabled="True" ID="txtBarangay" Placeholder="Barangay" class="form-control"></asp:TextBox>
                                 <br/>
                             </div>
                             <div class="form-outline mb-4">
-                                <asp:TextBox runat="server" Enabled="True" ID="txtMunicipality" Placeholder="Municipality" class="form-control" required="required"></asp:TextBox>
+                                <asp:TextBox runat="server" Enabled="True" ID="txtMunicipality" Placeholder="Municipality" class="form-control"></asp:TextBox>
                                 <br/>
                             </div>
                             <div class="form-outline mb-4">
-                                <asp:TextBox runat="server" Enabled="True" ID="txtCity" Placeholder="City" class="form-control"></asp:TextBox>
+                                <asp:TextBox runat="server" Enabled="True" ID="txtProvince" Placeholder="Province" class="form-control"></asp:TextBox>
                                 <br/>
                             </div>
                             <div class="form-outline mb-4">
-                                <asp:TextBox runat="server" Enabled="True" ID="txtZipCode" Placeholder="Zip Code" class="form-control" required="required"></asp:TextBox>
+                                <asp:TextBox runat="server" Enabled="True" ID="txtZipCode" Placeholder="Zip Code" class="form-control"></asp:TextBox>
                                 <br/>
                             </div>
                         </div>
                         <div class="pt-1 mb-4">
-                            <asp:Button Text="Register" runat="server" ID="btnRegister" OnClick="btnRegister_OnClick" class="btn btn-info btn-lg btn-block"/>
+                            <asp:Button Text="Register" runat="server" ID="btnRegister" OnClick="btnRegister_OnClick" class="btn btn-info btn-lg btn-block"></asp:Button>
                         </div>
 
                         <p>Already have an account? <a href="Signin.aspx" class="link-info">Sign In</a></p>
