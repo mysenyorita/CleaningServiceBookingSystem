@@ -50,12 +50,28 @@
                </div>
                <div class="navbar-collapse collapse">
                    <ul class="nav navbar-nav">
-                       <li><a runat="server" href="~/">Home</a></li>
+                       <li><a runat="server" href="~/Default">Home</a></li>
                        <li><a runat="server" href="~/About">About</a></li>
                        <li><a runat="server" href="~/Contact">Contact</a></li>
                    </ul>
-                   <ul class="nav navbar-nav navbar-right"> <!-- Add navbar-right class here -->
-                       <li><a runat="server" href="~/Signin">Signin</a></li>
+                   <ul class="nav navbar-nav navbar-right">
+                       <% if (HttpContext.Current.User.Identity.IsAuthenticated) { %>
+                          <li class="nav-item dropdown">
+                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <%= UserName %>
+                             </a>
+                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="Logout.aspx">Logout</a>
+                             </div>
+                          </li>
+                       <% } else { %>
+                          <li class="nav-item">
+                             <a class="nav-link" href="Signin.aspx" id="Signin">Signin</a>
+                          </li>
+                       <% } %>
+
                    </ul>
                </div>
            </div>
@@ -79,5 +95,5 @@
         <%:Scripts.Render("~/Scripts/bootstrap.js") %>
     </asp:Placeholder>
 
-   </body>
+</body>
 </html>

@@ -19,72 +19,54 @@
                             <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Register</h3>
 
                             <div class="form-outline mb-4">
-                                <asp:TextBox runat="server" Enabled="True" ID="txtLastName" class="form-control" required="required"></asp:TextBox>
-                                <asp:Label runat="server" class= "form-label" for="lblLastName">Last Name</asp:Label>
+                                <asp:TextBox runat="server" Enabled="True" Placeholder="Lastname" ID="txtLastName" class="form-control" required="required"></asp:TextBox>
+                                <br/>
                             </div>
 
                             <div class="form-outline mb-4">
-                                <asp:TextBox runat="server" Enabled="True" ID="txtFirstName" class="form-control" required="required"></asp:TextBox>
-                                <asp:Label runat="server" class= "form-label" for="lblFirstName">First Name</asp:Label>
+                                <asp:TextBox runat="server" Enabled="True" Placeholder="Firstname" ID="txtFirstName" class="form-control" required="required"></asp:TextBox>
+                                <br/>
                             </div>
 
-                            <div class="form-outline mb-4"> 
-                                <asp:TextBox runat="server" Enabled="True" TextMode="Email" ID="txtPassword" class="form-control" required="required"></asp:TextBox>
-                                <asp:Label runat="server" class="form-label" for="lblEmail">Email</asp:Label>
+                            <div class="form-outline mb-4">
+                                <asp:TextBox runat="server" Enabled="True" TextMode="Email" Placeholder="Email" ID="txtEmail" class="form-control" required="required"></asp:TextBox>
+                                <br/>
                             </div>
 
-                            <div class="form-outline mb-4"> 
-                                <asp:TextBox runat="server" Enabled="True" TextMode="Phone" ID="txtPhone" class="form-control" required="required"></asp:TextBox>
-                                <asp:Label runat="server" class="form-label" for="lblPhone">Phone</asp:Label>
+                            <div class="form-outline mb-4">
+                                <asp:TextBox runat="server" Enabled="True" TextMode="Phone" Placeholder="Phone" ID="txtPhone" class="form-control"></asp:TextBox>
+                                <br/>
                             </div>
-
-                         <h5>Select Address</h5>
-                       <form method="post" action="">
-                        Street Address:
-                            <select name="Choice">
-                                    <option value="Riverside">Riverside</option>
-                                    <option value="Fermina">Fermina</option>
-                                    <option value="Pasil">Pasil</option>
-                            </select> <br/><br/>
-                        Baranggay:
-                            <select name="Choice">
-                                    <option value="Poblacion">Poblacion</option>
-                                    <option value="Maya">Maya</option>
-                                    <option value="Tapilon">Tapilon</option>
-                                    <option value="Agujo">Agujo</option>
-                            </select> <br/><br/>
-                        Municipality:
-                            <select name="Choice">
-                                    <option value="Daanbantayan">Daanbantayan</option>
-                                    <option value="Medellin">Medellin</option>
-                                    <option value="San Remegio">San Remegio</option>
-                            </select> <br/><br/>
-                        City:
-                            <select name="Choice">
-                                    <option value="Bogo">Bogo</option>
-                                    <option value="Mandaue">Mandaue</option>
-                                    <option value="Cebu">Cebu</option>
-                            </select> <br/><br/>
-                   
-                        Zip Code:
-                            <select name="Choice">
-                                    <option value="6013">6013</option>
-                                    <option value="6012">6012</option>
-                                    <option value="6011">6011</option>
-                            </select> <br/><br/>
-
-
-                            <div class="pt-1 mb-4">
-                                <asp:Button Text="Register" runat="server" ID="btnLogin" OnClick-="btnLogin_Click" class="btn btn-info btn-lg btn-block" />
-                            </div>                          
-                                                                                    
-                            <p>Already have an account? <a href="Signin.aspx" class="link-info">Sign In</a></p>
-                       </form>
+                            <div class="form-outline mb-4">
+                                <asp:TextBox runat="server" Enabled="True" ID="txtStreet" Placeholder="Street" class="form-control"></asp:TextBox>
+                                <br/>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <asp:TextBox runat="server" Enabled="True" ID="txtBarangay" Placeholder="Barangay" class="form-control"></asp:TextBox>
+                                <br/>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <asp:TextBox runat="server" Enabled="True" ID="txtMunicipality" Placeholder="Municipality" class="form-control"></asp:TextBox>
+                                <br/>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <asp:TextBox runat="server" Enabled="True" ID="txtProvince" Placeholder="Province" class="form-control"></asp:TextBox>
+                                <br/>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <asp:TextBox runat="server" Enabled="True" ID="txtZipCode" Placeholder="Zip Code" class="form-control"></asp:TextBox>
+                                <br/>
+                            </div>
                         </div>
+                        <div class="pt-1 mb-4">
+                            <asp:Button Text="Register" runat="server" ID="btnRegister" OnClick="btnRegister_OnClick" class="btn btn-info btn-lg btn-block"></asp:Button>
+                        </div>
+
+                        <p>Already have an account? <a href="Signin.aspx" class="link-info">Sign In</a></p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>    
+    </section>
 
 </asp:Content>
