@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace CleaningServiceBookingSystem
 {
@@ -12,18 +13,39 @@ namespace CleaningServiceBookingSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
         protected void btnRegister_OnClick(object sender, EventArgs e)
         {
-            string LName;
-            string FName;
-            string FullName;
+            string LastName;
+            string FirstName;
+            string Email;
+            string Password;
+            string Phone;
+            string Street;
+            string Barangay;
+            string Municipality;
+            string Province;
+            string ZipCode;
 
-            LName = txtLastName.Text;
-            FName = txtFirstName.Text;
-            FullName = FName + " " + LName;
-            
+            LastName = txtLastName.Text;
+            FirstName = txtFirstName.Text;
+            Email = txtEmail.Text;
+            Password = txtPassword.Text;
+            Phone = txtPhone.Text;
+            Street = txtStreet.Text;
+            Barangay = txtBarangay.Text;
+            Municipality = txtMunicipality.Text;
+            Province = txtProvince.Text;
+            ZipCode = txtZipCode.Text;
+
+            SqlConnection connection = new SqlConnection();
+
+            connection.Open();
+
+            string query = "INSERT INTO tblUsers (userid,passwordm)" ;
+
+            SqlCommand command = new SqlCommand(query, connection);
         }
     }
 }
