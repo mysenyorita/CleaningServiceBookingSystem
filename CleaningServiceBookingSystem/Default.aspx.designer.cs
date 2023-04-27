@@ -13,19 +13,5 @@ namespace CleaningServiceBookingSystem
 
     public partial class _Default
     {
-
-        /// <summary>
-        /// Master property.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated property.
-        /// </remarks>
-        public new CleaningServiceBookingSystem.SiteMaster Master
-        {
-            get
-            {
-                return ((CleaningServiceBookingSystem.SiteMaster)(base.Master));
-            }
-        }
     }
 }

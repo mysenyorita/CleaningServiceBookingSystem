@@ -23,13 +23,18 @@
                                 <br/>
                             </div>
 
-                            <div class="form-outline mb-4">
+                            <div class="form-outline mb-3">
                                 <asp:TextBox runat="server" Enabled="True" Placeholder="Firstname" ID="txtFirstName" class="form-control" required="required"></asp:TextBox>
                                 <br/>
-                            </div>
+                            </div
 
                             <div class="form-outline mb-4">
                                 <asp:TextBox runat="server" Enabled="True" TextMode="Email" Placeholder="Email" ID="txtEmail" class="form-control" required="required"></asp:TextBox>
+                                <br/>
+                            </div>
+                            
+                            <div class="form-outline mb-4">
+                                <asp:TextBox runat="server" Enabled="True" TextMode="Password" Placeholder="Password" ID="txtPassword" class="form-control" required="required"></asp:TextBox>
                                 <br/>
                             </div>
 

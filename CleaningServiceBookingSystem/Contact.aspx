@@ -2,15 +2,15 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
-    <h3>Your contact page.</h3>
+    <h3>Contact Info</h3>
     <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
+        238 HAMPSTEAD RD<br />
+        CLEARVIEW SA 5085<br />
         <abbr title="Phone">P:</abbr>
-        425.555.0100
+        +61 413 651 744
     </address>
 
     <address>
-        <strong> Owner:</strong>   <a href="https://www.facebook.com/daisy.pareja"> </a><br />
+        <strong> Owner:</strong>   <P> JESSIELINDA PEPITO PAREJA </P><br />
     </address>
 </asp:Content>
