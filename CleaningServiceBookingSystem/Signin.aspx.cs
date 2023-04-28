@@ -58,9 +58,6 @@ namespace CleaningServiceBookingSystem
                     // Redirect to the default page
                     Response.Redirect("~/Default.aspx");
                 }
-                else
-                {
-                }
             }
         }
     }
