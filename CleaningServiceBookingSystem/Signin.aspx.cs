@@ -24,13 +24,15 @@ namespace CleaningServiceBookingSystem
                    new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
             {
                 connection.Open();
-                var getEmail = new SqlCommand("SELECT COUNT(*) FROM UserInformation.Users WHERE Email = @Email AND Password = @Password",
-                    connection);
-                var getPassword = new SqlCommand("SELECT COUNT(*) FROM UserInformation.Users WHERE Password = @Password",
+                var getEmail = new SqlCommand("SELECT COUNT(*) FROM UserInformation.Users WHERE Email = @Email",
                     connection);
                 getEmail.Parameters.AddWithValue("@Email", Email);
+                var getPassword = new SqlCommand("SELECT COUNT(*) FROM UserInformation.Users WHERE Password = @Password",
+                    connection);
+                getEmail.Parameters.AddWithValue("@Password", Password);
                 var countEmail = (int)getEmail.ExecuteScalar();
-                if (countEmail > 0)
+                var countPassword = (int)getPassword.ExecuteScalar();
+                if (countEmail > 0 && countPassword > 0)
                 {
                     Console.WriteLine("Login Successful");
                     // Create an authentication ticket with the user's email address
