@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Web;
 using System.Web.Security;
+using Microsoft.Ajax.Utilities;
 
 namespace CleaningServiceBookingSystem
 {
@@ -8,35 +11,50 @@ namespace CleaningServiceBookingSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
+
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             string Email = txtEmail.Text;
             string Password = txtPassword.Text;
             Session["UserName"] = Email;
 
-            if (Email == "admin@admin" && Password == "admin")
+            // Check if user already exists with the same email or username
+            using (var connection =
+                   new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
             {
-                // Create an authentication ticket with the user's email address
-                FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
-                    1, // version number
-                    Email, // user name
-                    DateTime.Now, // issue time
-                    DateTime.Now.AddMinutes(30), // expiration time
-                    false, // is persistent
-                    "" // user data (not used here)
-                );
+                connection.Open();
+                var getEmail = new SqlCommand("SELECT COUNT(*) FROM UserInformation.Users WHERE Email = @Email AND Password = @Password",
+                    connection);
+                var getPassword = new SqlCommand("SELECT COUNT(*) FROM UserInformation.Users WHERE Password = @Password",
+                    connection);
+                getEmail.Parameters.AddWithValue("@Email", Email);
+                var countEmail = (int)getEmail.ExecuteScalar();
+                if (countEmail > 0)
+                {
+                    Console.WriteLine("Login Successful");
+                    // Create an authentication ticket with the user's email address
+                    FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
+                        1, // version number
+                        Email, // user name
+                        DateTime.Now, // issue time
+                        DateTime.Now.AddMinutes(30), // expiration time
+                        false, // is persistent
+                        "" // user data (not used here)
+                    );
 
-                // Encrypt the ticket and add it to the response cookie
-                string encryptedTicket = FormsAuthentication.Encrypt(ticket);
-                HttpCookie authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
-                Response.Cookies.Add(authCookie);
-                
-                // Redirect to the default page
-                Response.Redirect("~/Default.aspx");
+                    // Encrypt the ticket and add it to the response cookie
+                    string encryptedTicket = FormsAuthentication.Encrypt(ticket);
+                    HttpCookie authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
+                    Response.Cookies.Add(authCookie);
+
+                    // Redirect to the default page
+                    Response.Redirect("~/Default.aspx");
+                }
+                else
+                {
+                }
             }
         }
-
     }
 }
