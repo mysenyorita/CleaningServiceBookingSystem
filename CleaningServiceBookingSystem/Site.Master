@@ -75,6 +75,7 @@
                            <script>
                            console.log("Request Invalidated") // Debug
                            </script>
+                           
                          <li class="nav-item">
                             <a class="nav-link" href="Signin.aspx" id="Signin">Signin</a>
                          </li>
