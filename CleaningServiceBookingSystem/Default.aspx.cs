@@ -13,6 +13,13 @@ namespace CleaningServiceBookingSystem
                     
                 Console.WriteLine("User is Not Authenticated \n");
             }
+            // Backup incase first statement doesn't work
+            if (Request.IsAuthenticated == false )
+            {
+                Response.Redirect("~/Signin.aspx");
+                    
+                Console.WriteLine("User is Not Authenticated \n");
+            }
         }
     }
 }

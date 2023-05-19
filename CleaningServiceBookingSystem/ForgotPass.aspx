@@ -1,4 +1,4 @@
-<%@ Page Title="Title" Language="C#" MasterPageFile="Site.Master" CodeBehind="ForgotPass.aspx.cs" Inherits="CleaningServiceBookingSystem.ForgotPass" %>
+<%@ Page Title="Title" Language="C#" MasterPageFile="~/Site.Master" CodeBehind="~/ForgotPass.aspx.cs" Inherits="CleaningServiceBookingSystem.ForgotPass" %>
 
 <asp:Content runat="server" ID="Content_ForgetPass" ContentPlaceHolderID="MainContent">
     <section>
