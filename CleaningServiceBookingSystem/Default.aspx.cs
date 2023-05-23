@@ -7,12 +7,19 @@ namespace CleaningServiceBookingSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.IsAuthenticated == false )
-            {
-                Response.Redirect("~/Signin.aspx");
-                    
-                Console.WriteLine("User is Not Authenticated \n");
-            }
+            // if (Request.IsAuthenticated == false )
+            // {
+            //     Response.Redirect("~/Signin.aspx");
+            //         
+            //     Console.WriteLine("User is Not Authenticated \n");
+            // }
+            // // Backup incase first statement doesn't work
+            // if (Request.IsAuthenticated == false )
+            // {
+            //     Response.Redirect("~/Signin.aspx");
+            //         
+            //     Console.WriteLine("User is Not Authenticated \n");
+            // }
         }
     }
 }
