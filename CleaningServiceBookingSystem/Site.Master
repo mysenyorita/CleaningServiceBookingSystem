@@ -66,6 +66,8 @@
                                 <%= UserName %>
                              </a>
                              <div class="dropdown-menu navbar-nav" aria-labelledby="navbarDropdown">
+                                 <a class="dropdown-item" href="dashboard.aspx">Dashboard</a>
+                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Profile</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="Logout.aspx">Logout</a>

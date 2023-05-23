@@ -64,7 +64,7 @@ namespace CleaningServiceBookingSystem
                         1, // version number
                         Email, // user name
                         DateTime.Now, // issue time
-                        DateTime.Now.AddMinutes(30), // expiration time
+                        DateTime.Now.AddMinutes(1), // expiration time
                         false, // is persistent
                         "" // user data (not used here)
                     );
@@ -75,7 +75,7 @@ namespace CleaningServiceBookingSystem
                     
                     
                     // Redirect to the default page
-                    Response.Redirect("~/Default.aspx");
+                    Response.Redirect("~/dashboard.aspx");
                 }
                 connection.Close();
             }

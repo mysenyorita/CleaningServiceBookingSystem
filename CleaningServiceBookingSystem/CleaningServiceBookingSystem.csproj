@@ -119,6 +119,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="dashboard.aspx" />
+    <Content Include="dashboard_table.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -132,6 +134,12 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="js\demo\chart-area-demo.js" />
+    <Content Include="js\demo\chart-bar-demo.js" />
+    <Content Include="js\demo\chart-pie-demo.js" />
+    <Content Include="js\demo\datatables-demo.js" />
+    <Content Include="js\sb-admin-2.js" />
+    <Content Include="js\sb-admin-2.min.js" />
     <Content Include="LoginReg.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Logout.aspx" />
@@ -188,6 +196,20 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dashboard.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard_table.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>dashboard_table.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard_table.aspx.designer.cs">
+      <DependentUpon>dashboard_table.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -202,6 +224,7 @@
     <Compile Include="ForgotPass.aspx.designer.cs">
       <DependentUpon>ForgotPass.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GetUser.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -268,7 +291,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Staff\" />
+    <Folder Include="asset\" />
     <Folder Include="Web Page\" />
   </ItemGroup>
   <PropertyGroup>
