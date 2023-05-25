@@ -1,15 +1,16 @@
 using System;
 using System.Web;
+using System.Web.UI;
+
 namespace CleaningServiceBookingSystem
 {
-    public class GetUser
+    public static class Bundle
     {
-        public string GetUserName()
+        public static string GetUserName()
         {
             string User = HttpContext.Current.Session["Username"] as string;
             Console.WriteLine(User);
             return User;
         }
-        
     }
 }

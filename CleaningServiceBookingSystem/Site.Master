@@ -4,113 +4,84 @@
 
 <html lang="en">
 <head runat="server">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> -Daisy Cleaning Service</title>
-
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
-
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <webopt:bundlereference runat="server" path="~/Content/css"/>
+    <title><%: Page.Title %> - Daisy Cleaning Service</title>
+    
+    <%-- <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon"/> --%>
+    <%-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /> --%>
+    <%-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" /> --%>
+    <%-- --%>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            console.log("Document ready"); // Debug
+            // Add the 'active' class to the current menu item
+            var currentPage = window.location.pathname.split('/').pop();
+            $('ul.navbar-nav li a[href="' + currentPage + '"]').parent().addClass('active');
+        });
+    </script>
 </head>
 <body>
     <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-            </Scripts>
-        </asp:ScriptManager>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-       <div class="navbar navbar-inverse navbar-fixed-top">
-           <div class="container">
-               <div class="navbar-header">
-                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
-                   </button>
-                   <a class="navbar-brand" runat="server" href="~/">Cleaning Service</a>
-               </div>
-               <div class="navbar-collapse collapse">
-                   <ul class="nav navbar-nav">
-                       <li><a runat="server" href="~/Default">Home</a></li>
-                       <li><a runat="server" href="~/About">About</a></li>
-                       <li><a runat="server" href="~/Contact">Contact</a></li>
-                   </ul>
-                   <ul class="nav navbar-nav navbar-right">
-                      <% if (Request.IsAuthenticated) { %>
-                           <script>
-                           console.log("Request Validated") // Debug
-                           </script>
-                         <li class="nav-item dropdown">
-                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <%= UserName %>
-                             </a>
-                             <div class="dropdown-menu navbar-nav" aria-labelledby="navbarDropdown">
-                                 <a class="dropdown-item" href="dashboard.aspx">Dashboard</a>
-                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Profile</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="Logout.aspx">Logout</a>
-                             </div>
-                         </li>
-                      <% } else { %>
-                           <script>
-                           console.log("Request Invalidated") // Debug
-                           </script>
-                           
-                         <li class="nav-item">
-                            <a class="nav-link" href="Signin.aspx" id="Signin">Signin</a>
-                         </li>
-                      <% } %>
-                   </ul>
-               </div>
-           </div>
-       </div>
-
-
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Cleaning Service</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item <% if (Request.Url.AbsolutePath.EndsWith("Default.aspx")) { %>active<% } %>">
+                            <a runat="server" href="~/Default.aspx">Home</a>
+                        </li>
+                        <li class="nav-item <% if (Request.Url.AbsolutePath.EndsWith("About.aspx")) { %>active<% } %>">
+                            <a runat="server" href="~/About.aspx">About</a>
+                        </li>
+                        <li class="nav-item <% if (Request.Url.AbsolutePath.EndsWith("Contact.aspx")) { %>active<% } %>">
+                            <a runat="server" href="~/Contact.aspx">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <% if (Request.IsAuthenticated)
+                           { %>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <%= UserName %>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="dashboard.aspx">Dashboard</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Profile</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="Logout.aspx">Logout</a>
+                                </div>
+                            </li>
+                        <% }
+                           else
+                           { %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Signin.aspx" id="Signin">Signin</a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-
             </asp:ContentPlaceHolder>
-            
-            
-            <footer id="footer">
+            <footer id="footer" class="fixed-bottom">
                 <p>&copy; <%: DateTime.Now.Year %> - Domestic Cleaning Service</p>
             </footer>
-            <style>
-                footer {
-                            position: absolute;
-                            width: 100%;
-                            height: 50px; /* height of the footer */
-                        }
-            </style>
         </div>
-
     </form>
-
     <asp:Placeholder runat="server">
-        <%:Scripts.Render("~/Scripts/bootstrap.js") %>
+        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
     </asp:Placeholder>
-
 </body>
 </html>

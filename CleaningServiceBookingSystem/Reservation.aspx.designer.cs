@@ -15,6 +15,15 @@ namespace CleaningServiceBookingSystem
     {
 
         /// <summary>
+        /// CalendarPicker control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar CalendarPicker;
+
+        /// <summary>
         /// DropDownListHoursRequired control.
         /// </summary>
         /// <remarks>
@@ -40,15 +49,6 @@ namespace CleaningServiceBookingSystem
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListPropertyLocation;
-
-        /// <summary>
-        /// Fees control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Fees;
 
         /// <summary>
         /// txtLastName control.
@@ -87,22 +87,22 @@ namespace CleaningServiceBookingSystem
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
 
         /// <summary>
-        /// txtPropertyType control.
+        /// txtAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPropertyType;
+        protected global::System.Web.UI.WebControls.TextBox txtAddress;
 
         /// <summary>
-        /// btnReserved control.
+        /// btnReserve control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReserved;
+        protected global::System.Web.UI.WebControls.Button btnReserve;
 
         /// <summary>
         /// Master property.

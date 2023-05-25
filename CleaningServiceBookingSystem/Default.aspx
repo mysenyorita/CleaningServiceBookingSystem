@@ -2,6 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    
+    
     <div class="jumbotron">
         <h1>Home Cleaning Service</h1>
         <p class="lead">Taking cleanliness to the next level.</p>

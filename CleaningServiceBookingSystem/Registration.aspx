@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="~/Registration.aspx.cs" Inherits="CleaningServiceBookingSystem.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
     <section class="vh-100">
         <div class="container-fluid">
             <div class="row">
@@ -61,7 +60,7 @@
                                 <br/>
                             </div>
                         </div>
-                        
+
                         <!-- LABEL OR REGISTRATION STATUS -->
                         <div class="fw-normal mb-3 pb-3">
                             <asp:Label runat="server" ID="lblStatus" CssClass="text-danger" EnableViewState="false"></asp:Label>
