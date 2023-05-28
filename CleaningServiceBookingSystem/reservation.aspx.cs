@@ -29,8 +29,15 @@ namespace CleaningServiceBookingSystem
 
         protected void btnReserved_OnClick(object sender, EventArgs e)
         {
+            getForm();
+            SQL_Insertion();
+        }
+
+        private void getForm()
+        {
+
             // Selection
-            _calendarDate = CalendarPicker.SelectedDate.ToString("yyyy-MM-dd");
+            _calendarDate = CalendarDateHiddenField.Value;
             _serviceHour = DropDownListHoursRequired.SelectedItem.Value;
             _propertyType = DropDownListPropertyType.SelectedItem.Value;
             _propertyLocation = DropDownListPropertyLocation.SelectedItem.Value;
@@ -46,7 +53,14 @@ namespace CleaningServiceBookingSystem
                               + "\nPropertyLocation: " + _propertyLocation + "\n\nFname: " + _rFname
                               + "\nLname: " + _rLname + "\nEmail: " + _rEmail + "\nNum: " + _rNum + "\nAddress: " +
                               _rAddress);
-
+            
+            // Check if a Date is Selected
+            if (string.IsNullOrEmpty(_calendarDate))
+            {
+                string script = "showPopupMessage('Unsuccessful', 'Date Not Selected');";
+                ClientScript.RegisterStartupScript(this.GetType(), "ShowPopupScript", script, true);
+                return;
+            }
             SQL_Insertion();
         }
 
