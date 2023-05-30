@@ -1,18 +1,14 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CleaningServiceBookingSystem.SiteMaster" %>
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head runat="server">
-    <webopt:bundlereference runat="server" path="~/Content/css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title><%: Page.Title %> - Daisy Cleaning Service</title>
-    
-    <%-- <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon"/> --%>
-    <%-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /> --%>
-    <%-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" /> --%>
-    <%-- --%>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             console.log("Document ready"); // Debug
@@ -23,65 +19,72 @@
     </script>
 </head>
 <body>
-    <form runat="server">
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Cleaning Service</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item <% if (Request.Url.AbsolutePath.EndsWith("Default.aspx")) { %>active<% } %>">
-                            <a runat="server" href="~/Default.aspx">Home</a>
+<form runat="server">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" runat="server" href="~/">Cleaning Service</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="<% if (Request.Url.AbsolutePath.EndsWith("Default.aspx")) { %>active<% } %>">
+                        <a runat="server" href="~/Default.aspx">Home</a>
+                    </li>
+                    <li class="<% if (Request.Url.AbsolutePath.EndsWith("Services.aspx")) { %>active<% } %>">
+                        <a runat="server" href="~/Services.aspx">Services</a>
+                    </li>
+                    <li class="<% if (Request.Url.AbsolutePath.EndsWith("About.aspx")) { %>active<% } %>">
+                        <a runat="server" href="~/About.aspx">About</a>
+                    </li>
+                    <li class="<% if (Request.Url.AbsolutePath.EndsWith("Contact.aspx")) { %>active<% } %>">
+                        <a runat="server" href="~/Contact.aspx">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <% if (Request.IsAuthenticated)
+                       { %>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <%= UserName %> <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="dashboard.aspx">Dashboard</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="#">Profile</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="Logout.aspx">Logout</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item <% if (Request.Url.AbsolutePath.EndsWith("About.aspx")) { %>active<% } %>">
-                            <a runat="server" href="~/About.aspx">About</a>
+                    <% }
+                       else
+                       { %>
+                        <li>
+                            <a href="Signin.aspx" id="Signin">Signin</a>
                         </li>
-                        <li class="nav-item <% if (Request.Url.AbsolutePath.EndsWith("Contact.aspx")) { %>active<% } %>">
-                            <a runat="server" href="~/Contact.aspx">Contact</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <% if (Request.IsAuthenticated)
-                           { %>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <%= UserName %>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="dashboard.aspx">Dashboard</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Profile</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="Logout.aspx">Logout</a>
-                                </div>
-                            </li>
-                        <% }
-                           else
-                           { %>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Signin.aspx" id="Signin">Signin</a>
-                            </li>
-                        <% } %>
-                    </ul>
-                </div>
+                    <% } %>
+                </ul>
             </div>
         </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <footer id="footer" class="fixed-bottom">
-                <p>&copy; <%: DateTime.Now.Year %> - Domestic Cleaning Service</p>
-            </footer>
-        </div>
-    </form>
-    <asp:Placeholder runat="server">
-        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
-    </asp:Placeholder>
+    </nav>
+    <div class="container body-content">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer id="footer" class="navbar-fixed-bottom">
+            <p>&copy; <%: DateTime.Now.Year %> - Domestic Cleaning Service</p>
+        </footer>
+    </div>
+</form>
 </body>
 </html>

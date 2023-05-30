@@ -113,6 +113,7 @@
     <Content Include="App_Data\dbCleaningServiceSystem_log.ldf">
       <DependentUpon>dbCleaningServiceSystem.mdf</DependentUpon>
     </Content>
+    <Content Include="bg.jpg" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -169,6 +170,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Services.aspx" />
     <Content Include="Signin.aspx" />
     <Content Include="Site.Master" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
@@ -648,6 +650,13 @@
     </Compile>
     <Compile Include="Reservation.aspx.designer.cs">
       <DependentUpon>Reservation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
     </Compile>
     <Compile Include="Signin.aspx.cs">
       <DependentUpon>Signin.aspx</DependentUpon>

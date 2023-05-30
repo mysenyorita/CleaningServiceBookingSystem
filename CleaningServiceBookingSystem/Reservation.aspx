@@ -18,9 +18,6 @@
         .calendar-container {
             position: relative;
         }
-
-       
-
         .calendar-icon {
             position: absolute;
             top: 50%;

@@ -1,29 +1,26 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="~/Default.aspx.cs" Inherits="CleaningServiceBookingSystem.Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    
-    
-    <div class="jumbotron">
-        <h1>Home Cleaning Service</h1>
+    <br/>
+    <br/>
+    <div class="jumbotron" style="background-image: url(bg.jpg);">
+        <h1>Daisy Cleaning Service</h1>
         <p class="lead">Taking cleanliness to the next level.</p>
     </div>
-<style>
-    .jumbotron {
-      background-image: url(bg.jpg);
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-    }
 
-</style>
+    <div class="text-center">
+        <a href="Reservation.aspx" class="btn btn-primary">Book a Reservation Now</a>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <div class="row">
         <div class="col-md-4">
             <h2>Professional</h2>
             <p>
                 Daisy Cleaning Service is in charge of all general cleaning around the facility, home, or office building.
-            </p>          
+            </p>
         </div>
         <div class="col-md-4">
             <h2>Affordable</h2>
@@ -38,5 +35,6 @@
             </p>
         </div>
     </div>
+
 
 </asp:Content>
